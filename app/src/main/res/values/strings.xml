@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">cookbook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="witojcie_fragment">Powitanie: Witojcie Kumie</string>
 </resources>

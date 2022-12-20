@@ -8,31 +8,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("lifecycle_check", "onCreate")
+
+        addFragment()
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("lifecycle_check", "onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("lifecycle_check", "onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("lifecycle_check", "onPause")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("lifecycle_check", "onRestart")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("lifecycle_check", "onStop")
+    private fun addFragment() {
+        supportFragmentManager.beginTransaction().add(R.id.fragment_container, HomeFragment()).commit()
+        Log.d("lifecycle_check", "addFragment")
     }
 }

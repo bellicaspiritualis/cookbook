@@ -19,12 +19,5 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        addFragment()
-    }
-
-    private fun addFragment() {
-        supportFragmentManager.beginTransaction().add(R.id.fragment_container, HomeFragment()).commit()
-        Log.d("lifecycle_check", "addFragment")
     }
 }

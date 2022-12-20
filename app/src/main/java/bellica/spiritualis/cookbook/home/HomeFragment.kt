@@ -25,11 +25,6 @@ class HomeFragment: Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
-
-//        val view = inflater.inflate(R.layout.fragment_home, container,false)
-//        val myTextView = view.findViewById<TextView>(R.id.my_text_view)
-//        myTextView.text = viewModel.getText()
-//        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

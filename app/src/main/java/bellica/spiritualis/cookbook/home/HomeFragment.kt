@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import bellica.spiritualis.cookbook.R
 import bellica.spiritualis.cookbook.databinding.FragmentHomeBinding
@@ -33,6 +34,7 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecycler()
+        initClickListener()
     }
 
     override fun onDestroyView() {
@@ -43,5 +45,11 @@ class HomeFragment: Fragment() {
     private fun initRecycler() {
         binding.recipesRecycler.layoutManager = LinearLayoutManager(context)
         binding.recipesRecycler.adapter = RecipesAdapter(viewModel.getRecipes())
+    }
+
+    private fun initClickListener() {
+        binding.addButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_addFragment)
+        }
     }
 }

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import bellica.spiritualis.cookbook.databinding.FragmentAddBinding
+import bellica.spiritualis.cookbook.databinding.ItemIngredientBinding
 
 class AddFragment: Fragment() {
 
@@ -39,5 +40,15 @@ class AddFragment: Fragment() {
         binding.saveButton.setOnClickListener {
             findNavController().popBackStack()
         }
+
+        binding.addIngredientButton.setOnClickListener {
+            addIngredient()
+        }
+    }
+
+    private fun addIngredient() {
+        val container = binding.ingredientsContainer
+        val ingredientItem = ItemIngredientBinding.inflate(layoutInflater, container, false)
+        container.addView(ingredientItem.root)
     }
 }

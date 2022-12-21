@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import bellica.spiritualis.cookbook.R
 import bellica.spiritualis.cookbook.databinding.FragmentHomeBinding
+import bellica.spiritualis.cookbook.home.adapter.RecipesAdapter
 
 class HomeFragment: Fragment() {
 
@@ -29,7 +32,7 @@ class HomeFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initText()
+        initRecycler()
     }
 
     override fun onDestroyView() {
@@ -37,7 +40,8 @@ class HomeFragment: Fragment() {
         _binding = null
     }
 
-    private fun initText() {
-        binding.myTextView.text = viewModel.getText()
+    private fun initRecycler() {
+        binding.recipesRecycler.layoutManager = LinearLayoutManager(context)
+        binding.recipesRecycler.adapter = RecipesAdapter(viewModel.getRecipes())
     }
 }

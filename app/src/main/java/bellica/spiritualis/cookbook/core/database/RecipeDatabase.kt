@@ -23,7 +23,7 @@ abstract class RecipeDatabase : RoomDatabase() {
 
     companion object {
         private const val DATABASE_NAME = "cookbook.db"
-        private const val DATABASE_DIR = "database/base_recipe.db"
+        private const val DATABASE_DIR = "database/cookbook_db.db"
 
         fun getInstance(applicationContext: Context) = Room
             .databaseBuilder(applicationContext, RecipeDatabase::class.java, DATABASE_NAME)

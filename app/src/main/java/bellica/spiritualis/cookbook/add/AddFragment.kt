@@ -42,7 +42,7 @@ class AddFragment: Fragment() {
 
     private fun initClickListeners() {
         binding.saveButton.setOnClickListener {
-            val recipe = getRecipes()
+            viewModel.onSaveClick(getRecipes())
             findNavController().popBackStack()
         }
 

@@ -40,6 +40,11 @@ class HomeFragment: Fragment() {
         initObservers()
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.getrecipes()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -58,7 +63,7 @@ class HomeFragment: Fragment() {
 
     private fun initObservers() {
         viewModel.recipes.observe(viewLifecycleOwner) { recipes ->
-            recipesAdapter.setItems(recipes)
+            recipesAdapter.setItems(recipes ?: emptyList())
         }
     }
 }

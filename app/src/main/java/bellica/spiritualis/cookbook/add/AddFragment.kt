@@ -8,6 +8,7 @@ import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import bellica.spiritualis.cookbook.core.convertToDouble
 import bellica.spiritualis.cookbook.databinding.FragmentAddBinding
 import bellica.spiritualis.cookbook.databinding.ItemIngredientBinding
 import bellica.spiritualis.cookbook.models.Ingredient
@@ -72,7 +73,7 @@ class AddFragment: Fragment() {
             val ingredient = with(ingredientBinding) {
                 Ingredient(
                     title = name.text.toString(),
-                    amount = amount.text.toString().replace(",", ".").toDouble(),
+                    amount = amount.text.toString().replace(",", ".").convertToDouble(),
                     measureType = unit.text.toString()
                 )
             }

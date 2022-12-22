@@ -1,5 +1,6 @@
 package bellica.spiritualis.cookbook.home.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,7 @@ import bellica.spiritualis.cookbook.models.Recipe
 import java.text.FieldPosition
 
 class RecipesAdapter(
-    private val recipes: List<Recipe>
+    private val recipes: MutableList<Recipe>
 ): RecyclerView.Adapter<RecipesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipesViewHolder {
@@ -21,4 +22,11 @@ class RecipesAdapter(
     }
 
     override fun getItemCount() = recipes.size
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setItems(recipes: List<Recipe>) {
+        this.recipes.clear()
+        this.recipes.addAll(recipes)
+        notifyDataSetChanged()
+    }
 }

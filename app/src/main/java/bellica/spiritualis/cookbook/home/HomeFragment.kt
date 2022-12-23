@@ -12,16 +12,18 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import bellica.spiritualis.cookbook.R
 import bellica.spiritualis.cookbook.databinding.FragmentHomeBinding
+import bellica.spiritualis.cookbook.home.adapter.OnRecipeClickListener
 import bellica.spiritualis.cookbook.home.adapter.RecipesAdapter
+import bellica.spiritualis.cookbook.models.Recipe
 
-class HomeFragment: Fragment() {
+class HomeFragment: Fragment(), OnRecipeClickListener {
 
     private var _binding: FragmentHomeBinding? = null
     val binding get() = _binding!!
 
     private val viewModel: HomeFragmentViewModel by viewModels()
 
-    private var recipesAdapter: RecipesAdapter = RecipesAdapter(mutableListOf())
+    private var recipesAdapter: RecipesAdapter = RecipesAdapter(mutableListOf(), this)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,6 +50,11 @@ class HomeFragment: Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onItemClick(item: Recipe) {
+        val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(item.id)
+        findNavController().navigate(action)
     }
 
     private fun initRecycler() {

@@ -9,7 +9,8 @@ import bellica.spiritualis.cookbook.models.Recipe
 import java.text.FieldPosition
 
 class RecipesAdapter(
-    private val recipes: MutableList<Recipe>
+    private val recipes: MutableList<Recipe>,
+    private val listener: OnRecipeClickListener
 ): RecyclerView.Adapter<RecipesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipesViewHolder {
@@ -18,7 +19,7 @@ class RecipesAdapter(
     }
 
     override fun onBindViewHolder(holder: RecipesViewHolder, position: Int) {
-        holder.bind(recipes[position])
+        holder.bind(recipes[position], listener)
     }
 
     override fun getItemCount() = recipes.size

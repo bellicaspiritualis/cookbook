@@ -12,11 +12,26 @@
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
             app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+            <argument
+                android:name="recipeID"
+                app:argType="long"/>
     </fragment>
 
     <fragment
         android:id="@+id/addFragment"
         android:name="bellica.spiritualis.cookbook.add.AddFragment"
         tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="bellica.spiritualis.cookbook.details.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="recipeID"
+            app:argType="long"/>
+    </fragment>
 
 </navigation>

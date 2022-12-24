@@ -18,10 +18,10 @@
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/fab_button_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@android:drawable/ic_input_add"
-        android:contentDescription="add recipe"/>
+        android:contentDescription="@string/add_recipe"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

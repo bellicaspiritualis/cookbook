@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">cookbook</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="witojcie_fragment">Witojcie Kumie; na start -> fragment HomeFragment </string>
+    <string name="save">save</string>
+    <string name="description">Description</string>
+    <string name="add_ingredient">Add Ingredient</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="title">Title</string>
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FragmentLabelStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_marginTop">@dimen/margin_10</item>
+        <item name="android:layout_marginBottom">@dimen/margin_10</item>
+        <item name="android:drawablePadding">@dimen/padding_5</item>
+        <item name="drawableStartCompat">@drawable/ic_cookie_gold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="CustomButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/button_color</item>
+        <item name="android:textColor">@color/content_text_color</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="textAllCaps">true</item>
+        <item name="minHeight">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.CustomButton</item>
+        <item name="android:paddingTop">@dimen/button_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/button_padding_vertical</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.CustomButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/button_radius</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay"></style>
+</resources>

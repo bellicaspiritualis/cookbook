@@ -7,4 +7,6 @@
     <string name="ingredients">Ingredients</string>
     <string name="title">Title</string>
     <string name="add_recipe">add recipe</string>
+    <string name="add_new_recipe">New Recipe</string>
+    <string name="fragment_home_label">My Recipe</string> />
 </resources>

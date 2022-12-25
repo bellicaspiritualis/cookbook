@@ -6,11 +6,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/fragment_label"
             style="@style/FragmentLabelStyle"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/add_new_recipe"
@@ -20,10 +21,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:paddingTop="15dp"
+            android:textStyle="bold"
             android:id="@+id/title_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title"
             app:layout_constraintBottom_toTopOf="@id/title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -32,6 +34,8 @@
 
         <EditText
             android:id="@+id/title"
+            android:textStyle="bold"
+            android:hint="@string/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +45,8 @@
             android:inputType="text"/>
         <TextView
             android:id="@+id/description_label"
-            android:text="@string/description"
+
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/add_ingredient_button"
@@ -49,6 +54,8 @@
 
         <EditText
             android:id="@+id/description"
+            android:textStyle="bold"
+            android:hint="@string/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +66,7 @@
         <TextView
             android:id="@+id/ingredient_label"
             android:text="@string/ingredients"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/add_ingredient_button"
@@ -88,6 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -15,9 +15,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">@color/content_text_color</item>
         <item name="android:textSize">@dimen/general_text_size</item>
-        <!--
+<!--
         <item name="materialButtonStyle">@dimen/CustomButton</item>
         <item name="textInputStyle">@style/CustomTextInputLayoutOutlined</item>
-        -->
+-->
     </style>
 </resources>

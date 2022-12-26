@@ -12,5 +12,7 @@
     <string name="name">name</string>
     <string name="amount">amount</string>
     <string name="unit">unit</string>
+    <string name="delete_recipe">delete recipe</string>
+    <string name="description_of_the_preparation">Description of the preparation</string>
     />
 </resources>

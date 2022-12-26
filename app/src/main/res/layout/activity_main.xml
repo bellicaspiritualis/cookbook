@@ -10,4 +10,6 @@
     app:defaultNavHost="true"
     android:padding="@dimen/fragment_margin"
     app:navGraph="@navigation/nav_graph"
+
+
  />

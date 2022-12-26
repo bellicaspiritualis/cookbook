@@ -20,7 +20,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:paddingTop="45dp"
-        android:textStyle="bold"
+        android:textSize="50sp"
         android:text="@string/fragment_home_label"
         android:id="@+id/recipes_recycler"
         android:layout_width="match_parent"

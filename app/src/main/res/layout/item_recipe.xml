@@ -4,4 +4,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/title"
     xmlns:tools="http://schemas.android.com/tools"
+    android:textStyle="bold"
+    android:textSize="18sp"
     tools:text="Przepis 1" />

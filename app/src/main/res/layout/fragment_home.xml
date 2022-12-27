@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:textStyle="bold"
         android:paddingTop="45dp"
         android:textSize="50sp"
         android:text="@string/fragment_home_label"
@@ -38,6 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/cookie_white"
+        app:tint="@color/white"
         android:contentDescription="@string/add_recipe"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
